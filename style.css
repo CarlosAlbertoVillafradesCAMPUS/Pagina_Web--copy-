@@ -1,0 +1,178 @@
+body{
+    height: 100vh;
+}
+.container-header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content:space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, .7) ;
+    position: absolute;
+}
+.name{
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav-item{
+    border-radius: 5px;
+}
+.nav-link{
+    font-size: 14px;
+    color: white;
+}
+.nav-link:hover{
+    background-color: #fd6444; 
+    color: white;
+}
+.nav-link:active{
+    background-color: #fd6444; 
+    color: white;
+}
+.container-page1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/image/fondo-bienvenido-grande.jpg);
+    display: grid;
+    place-content: center;
+}
+.container-page1 .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.text p{
+    margin: 0;
+    font-size: 16px;
+}
+.text h1{
+    font-size: 56px;
+    margin: 15px;
+}
+.text button {
+    font-size: 12px;
+    padding: 8px;
+    background-color: #fd6444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-page2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.cont-1{
+    width: 100%;
+    height: 50%;
+    display: grid;
+    place-content: center;
+    background-color: #fd6444;
+    color: white;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.cont-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.cont-image img{
+    object-fit: cover;
+}
+.cont-1 h2{
+    margin: 15px;
+    font-size: 36px;
+}
+.cont-1 p{
+    font-size: 14px;
+}
+.cont-1 button{
+    margin: 5px;
+    border: none;
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cont-2{
+    width: 100%;
+    height: 50%;
+}
+.cont-2 .adjunto-design{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+.cont-2 h2{
+    font-size: 36px;
+    margin-top: 50px;
+}
+.cont-2 .cont-images-items{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.image-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+.image-item svg{
+    width: 70px;
+    height: 70px;
+    fill: #fd6444;
+}
+.image-item h4{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.image-item p{
+    font-size: 14px;
+}
+.container-page3{
+    width: 100%;
+    height: 80vh;
+    background-color: #444444;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.container-page3 h2{
+    font-size: 36px;
+    margin-top: 50px;
+    color: white;
+}
+.container-proyects{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+footer{
+    background-color: #2a2a2a;
+    text-align: center;
+    color: white;
+    border-top: 1px solid white ;
+    height: 8vh;
+}
