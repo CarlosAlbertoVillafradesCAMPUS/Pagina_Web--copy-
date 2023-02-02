@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Boostrap/jquery.min.js"></script>
     <link rel="stylesheet" href="Boostrap/bootstrap.css">
     <link rel="stylesheet" href="Boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="Boostrap/bootstrap-grid.css">
@@ -14,36 +15,26 @@
     <title>AULAIDEAL.COM</title>
 </head>
 <body>
-    <div class="container-header">
-        <p class="name">AULAIDEAL.COM</p>
-    <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link" href="#!">NOSOTROS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!">SERVICIOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!">PORTAFOLIO</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#!">CONTACTO</a>
-          </li>
-      </ul>
-      <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h4 class="text-white">Collapsed content</h4>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
         </div>
-        <nav class="navbar navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </nav>
-      </div>
-    </div>
+      </nav>
     <div class="container-page1">
         <div class="text">
             <p>Bienvenidos a nuestro estudio</p>
@@ -123,5 +114,7 @@
     <footer>
         <p>2016 © NETWORK Todos los derechos reservados</p>
     </footer>
+   <script src="./Boostrap/bootstrap.js"></script>
+   <script src="./Boostrap/bootstrap.min.js"></script>
 </body>
 </html>

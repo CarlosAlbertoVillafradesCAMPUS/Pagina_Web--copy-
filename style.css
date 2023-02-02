@@ -6,40 +6,31 @@ body{
 .container-header{
     display: flex;
     width: 100vw;
-    height: 80px;
+    height: 90px;
     justify-content:space-around;
     align-items: center;
     background: rgba(0, 0, 0, .6) ;
     position: absolute;
 }
+nav button{
+    display: none;
+}
+.collapse{
+    display: flex;
+    flex-direction: column;
+}
 .name{
     margin: 0;
     color: white;
     font-weight: bold;
-    font-size: 20px;
-}
-.nav-item{
-    border-radius: 5px;
-}
-.nav-link{
-    font-size: 14px;
-    color: white;
-}
-.nav-link:hover{
-    background-color: #fd6444; 
-    color: white;
-}
-.nav-link:active{
-    background-color: #fd6444; 
-    color: white;
-}
-.pos-f-t{
-    display: none;
+    font-size: 26px;
 }
 .container-page1{
     width: 100%;
     height: 100vh;
     background-image: url(/image/fondo-bienvenido-grande.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
     overflow: hidden;
     display: grid;
     place-content: center;
@@ -52,7 +43,7 @@ body{
 }
 .text p{
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 .text h1{
     font-size: 50px;
@@ -60,8 +51,8 @@ body{
     text-align: center;
 }
 .text button {
-    font-size: 12px;
-    padding: 8px;
+    font-size: 14px;
+    padding: 10px;
     background-color: #fd6444;
     color: white;
     border: none;
@@ -87,32 +78,33 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
+    width: 50%;
     height: auto;
     margin: auto;
     text-align: center;
 }
 .cont-image{
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 .cont-image img{
     object-fit: cover;
 }
 .cont-1 h2{
-    margin: 15px;
-    font-size: 34px;
+    margin: 20px;
+    font-size: 36px;
 }
 .cont-1 p{
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 .cont-1 button{
-    margin: 5px 0 25px 0;
+    margin: 20px 0 40px 0;
     border: none;
-    font-size: 13px;
-    padding: 5px;
+    font-size: 16px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -125,20 +117,20 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 60%;
     height: auto;
     margin: auto;
     text-align: center;
 }
 .cont-2 h2{
-    font-size: 32px;
-    margin: 18px 0;
+    font-size: 36px;
+    margin: 40px 0;
 }
 .cont-2 .cont-images-items{
     display: flex;
     flex-direction: row;
     justify-content:center;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 .image-item{
     display: flex;
@@ -147,21 +139,22 @@ body{
     margin: 0 20px;
 }
 .image-item svg{
-    width: 60px;
-    height: 60px;
+    width: 95px;
+    height: 95px;
     fill: #fd6444;
+    margin: 10px 0;
 }
 .image-item h4{
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     margin: 5px;
 }
 .image-item p{
-    font-size: 12px;
+    font-size: 16px;
 }
 .container-page3{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #444444;
     display: flex;
     flex-direction: column;
@@ -170,16 +163,15 @@ body{
     text-align: center;
 }
 .container-page3 h2{
-    font-size: 32px;
-    margin-top: 18px;
+    font-size: 34px;
     color: white;
+    margin: 30px 0;   
 }
 .container-proyects{
     display: grid;
-    grid-template-columns: 270px 270px 270px;
-    gap: 30px;
-    place-content: center;
-    margin-bottom: 20px;
+    grid-template-columns: 22vw 22vw 22vw;
+    gap: 35px;
+    margin-bottom: 100px;
 }
 .proyect img{
     transition: all .5s;
@@ -196,21 +188,20 @@ footer{
     background-color: #2a2a2a;
     color: white;
     border-top: 1px solid white ;
-    height: 12vh;
-    line-height: 12vh;
+    height: 13vh;
+    width: 100%;
+    line-height: 13vh;
     text-align: center;
   vertical-align: middle;
 }
+footer p{
+    font-size: 16px;
+    margin: 0;
+}
 
 @media(max-width:680px) {
-    .container-header ul{
-        display: none;
-    }
     .container-header{
         flex-direction: column-reverse;
-    }
-    .pos-f-t{
-        display:block;
     }
     .container-page1{
         background-image: url(/image/fondo-bienvenidos.jpg);
@@ -222,9 +213,15 @@ footer{
         height: auto;
     }
     .container-page3 h2{
-        margin-bottom: 30px;
+        margin: 30px 0;
     }
     .container-proyects{
-        grid-template-columns: 85vw;
+        grid-template-columns: 80vw;
+    }
+    .container-proyects{
+        margin-bottom: 40px;
+    }
+    nav button{
+        display: block;
     }
 }
