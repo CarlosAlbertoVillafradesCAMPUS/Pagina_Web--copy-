@@ -1,13 +1,15 @@
 body{
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
 }
 .container-header{
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 80px;
     justify-content:space-around;
     align-items: center;
-    background: rgba(0, 0, 0, .7) ;
+    background: rgba(0, 0, 0, .6) ;
     position: absolute;
 }
 .name{
@@ -31,10 +33,14 @@ body{
     background-color: #fd6444; 
     color: white;
 }
+.pos-f-t{
+    display: none;
+}
 .container-page1{
     width: 100%;
     height: 100vh;
     background-image: url(/image/fondo-bienvenido-grande.jpg);
+    overflow: hidden;
     display: grid;
     place-content: center;
 }
@@ -49,8 +55,9 @@ body{
     font-size: 16px;
 }
 .text h1{
-    font-size: 56px;
+    font-size: 50px;
     margin: 15px;
+    text-align: center;
 }
 .text button {
     font-size: 12px;
@@ -63,15 +70,16 @@ body{
 }
 .container-page2{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
 .cont-1{
     width: 100%;
-    height: 50%;
-    display: grid;
-    place-content: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #fd6444;
     color: white;
 }
@@ -79,27 +87,29 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 60%;
+    height: auto;
     margin: auto;
     text-align: center;
 }
 .cont-image{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
+    margin-top: 25px;
 }
 .cont-image img{
     object-fit: cover;
 }
 .cont-1 h2{
     margin: 15px;
-    font-size: 36px;
+    font-size: 34px;
 }
 .cont-1 p{
     font-size: 14px;
 }
 .cont-1 button{
-    margin: 5px;
+    margin: 5px 0 25px 0;
     border: none;
     font-size: 13px;
     padding: 5px;
@@ -108,71 +118,113 @@ body{
 }
 .cont-2{
     width: 100%;
-    height: 50%;
+    height: auto;
 }
 .cont-2 .adjunto-design{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
-    height: 100%;
+    width: 70%;
+    height: auto;
     margin: auto;
     text-align: center;
 }
 .cont-2 h2{
-    font-size: 36px;
-    margin-top: 50px;
+    font-size: 32px;
+    margin: 18px 0;
 }
 .cont-2 .cont-images-items{
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-direction: row;
+    justify-content:center;
+    margin: 30px 0;
 }
 .image-item{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 .image-item svg{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     fill: #fd6444;
 }
 .image-item h4{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 5px;
 }
 .image-item p{
-    font-size: 14px;
+    font-size: 12px;
 }
 .container-page3{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: #444444;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
 }
 .container-page3 h2{
-    font-size: 36px;
-    margin-top: 50px;
+    font-size: 32px;
+    margin-top: 18px;
     color: white;
 }
 .container-proyects{
     display: grid;
-    grid-template-columns: 350px 350px 350px;
-    gap: 50px;
-    margin-bottom: 50px;
+    grid-template-columns: 270px 270px 270px;
+    gap: 30px;
+    place-content: center;
+    margin-bottom: 20px;
+}
+.proyect img{
+    transition: all .5s;
+    cursor: pointer;
+}
+.proyect:hover img {
+    -webkit-transform:scale(1.2);transform:scale(1.2);
+    transition: all .5s;
+}
+.proyect{
+    overflow:hidden;
 }
 footer{
     background-color: #2a2a2a;
-    text-align: center;
     color: white;
     border-top: 1px solid white ;
-    height: 8vh;
+    height: 12vh;
+    line-height: 12vh;
+    text-align: center;
+  vertical-align: middle;
+}
+
+@media(max-width:680px) {
+    .container-header ul{
+        display: none;
+    }
+    .container-header{
+        flex-direction: column-reverse;
+    }
+    .pos-f-t{
+        display:block;
+    }
+    .container-page1{
+        background-image: url(/image/fondo-bienvenidos.jpg);
+    }
+    .cont-2 .cont-images-items{
+        flex-direction: column;
+    }
+    .container-page3{
+        height: auto;
+    }
+    .container-page3 h2{
+        margin-bottom: 30px;
+    }
+    .container-proyects{
+        grid-template-columns: 85vw;
+    }
 }
