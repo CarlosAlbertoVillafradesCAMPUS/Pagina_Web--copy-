@@ -4,26 +4,30 @@ body{
     width: 100%;
 }
 .navbar {
-    display: flex;
     width: 100%;
-    height: 90px;
-    justify-content:space-around;
-    align-items: center;
-    background: rgba(0, 0, 0, .6) ;
+    height: 100px;
+    background: rgba(0, 0, 0, .6) !important;
     position: absolute;
 }
-.navbar::after{
-    display: none;
-}
+
 .navbar .navbar-brand{
-    font-size: 22px;
+    font-size: 24px;
     color: white ;
     font-weight: bolder;
+    margin-left: 30px;
+}
+.navbar .navbar-toggler svg{
+    fill: white;
+    margin-right: 20px;
+}
+.navbar .navbar-brand:hover{
+    color: white;
 }
 .navbar .nav-item{
     display: flex;
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px;
+    margin: 0 5px;
     transition: all .5s ease ;
 }
 .navbar .nav-item:hover{
@@ -34,20 +38,8 @@ body{
 }
 .navbar .nav-link{
     color: white !important;
-    font-size: 18px;
+    font-size: 20px;
     margin: 0 15px;
-}
-.navbar .navbar-toggler{
-    display: none;
-}
-.navbar .collapse{
-    display: flex;
-}
-.name{
-    margin: 0;
-    color: white;
-    font-weight: bold;
-    font-size: 26px;
 }
 .container-page1{
     width: 100%;
@@ -225,8 +217,8 @@ footer p{
 }
 
 @media(max-width:680px) {
-    .container-header{
-        flex-direction: column-reverse;
+    .navbar {
+        height: auto;
     }
     .container-page1{
         background-image: url(/image/fondo-bienvenidos.jpg);
@@ -245,11 +237,5 @@ footer p{
     }
     .container-proyects{
         margin-bottom: 40px;
-    }
-    .navbar .navbar-toggler{
-        display: block;
-    }
-    .navbar .navbar-collapse{
-        display: none;
     }
 }
